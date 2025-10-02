@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مدقق توافر النطاق</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>مدقق توافر النطاق</h1>
+        <div class="input-group">
+            <input type="text" id="keywordInput" placeholder="أدخل كلمة مفتاحية للنطاق">
+            <select id="tldSelect">
+                <!-- سيتم ملء هذه الخيارات بواسطة JavaScript -->
+            </select>
+            <button id="checkButton">تحقق</button>
+        </div>
+        <div id="loading" class="hidden">جاري التحقق...</div>
+        <div id="results" class="results-box hidden">
+            <!-- سيتم عرض النتائج هنا -->
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
