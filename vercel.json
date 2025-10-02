@@ -1,0 +1,24 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "api/*.py",
+      "use": "@vercel/python"
+    },
+    {
+      "src": "public/**",    // يشير إلى أن جميع الملفات في مجلد public هي مصادر ثابتة
+      "use": "@vercel/static" // استخدم @vercel/static لتقديم الملفات الثابتة مباشرة
+      // لا تحتاج إلى 'config': { 'distDir': 'public' } هنا لأن 'src' يحدد بالفعل الدليل
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "/api/$1"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/public/$1" // يوجه الطلبات غير المتعلقة بـ /api إلى مجلد public
+    }
+  ]
+}
