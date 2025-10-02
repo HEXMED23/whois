@@ -1,0 +1,124 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7f6;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* تغيير إلى flex-start للسماح بالمحتوى أن يكون أعلى */
+    min-height: 100vh;
+    margin: 20px;
+    color: #333;
+    direction: rtl; /* لدعم اللغة العربية */
+    text-align: right;
+}
+
+.container {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    margin-top: 50px; /* لإضافة مسافة من الأعلى */
+}
+
+h1 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 30px;
+    font-size: 2.2em;
+}
+
+.input-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    flex-wrap: wrap; /* للسماح للعناصر بالالتفاف في الشاشات الصغيرة */
+    justify-content: center;
+}
+
+.input-group input[type="text"],
+.input-group select {
+    flex-grow: 1;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1em;
+    min-width: 150px; /* لضمان حد أدنى للعرض */
+}
+
+.input-group button {
+    padding: 12px 25px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.input-group button:hover {
+    background-color: #2980b9;
+}
+
+#loading {
+    text-align: center;
+    color: #7f8c8d;
+    margin-top: 20px;
+    font-style: italic;
+}
+
+.results-box {
+    background-color: #f9f9f9;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    padding: 20px;
+    margin-top: 20px;
+    min-height: 100px;
+}
+
+.results-box p {
+    margin-bottom: 10px;
+    line-height: 1.6;
+    font-size: 1.05em;
+}
+
+.results-box strong {
+    color: #2c3e50;
+}
+
+.available {
+    color: #27ae60; /* أخضر */
+    font-weight: bold;
+}
+
+.registered {
+    color: #e74c3c; /* أحمر */
+    font-weight: bold;
+}
+
+.check-failed {
+    color: #f39c12; /* برتقالي */
+    font-weight: bold;
+}
+
+.hidden {
+    display: none;
+}
+
+/* تنسيقات الأجهزة الصغيرة */
+@media (max-width: 600px) {
+    .input-group {
+        flex-direction: column;
+    }
+    .input-group input[type="text"],
+    .input-group select,
+    .input-group button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .container {
+        padding: 20px;
+        margin-top: 20px;
+    }
+}
